@@ -17,12 +17,12 @@ struct Theme: ThemeProtocol {
     let color: UIColor
     let backgroundColor: UIColor
 
-    static let light = ThemeProtocol(
+    static let light = Theme(
         color: UIColor.black
         backgroundColor: UIColor.white
     )
 
-    static let dark = ThemeProtocol(
+    static let dark = Theme(
         color: UIColor.white
         backgroundColor: UIColor.black
     )
