@@ -73,6 +73,11 @@ public class ThemeManager {
 
     fileprivate static var managers: Set<WeakBox> = []
 
+    /// Creates a `ThemeManager` instance
+    ///
+    /// - Note:
+    ///   Consider using `ThemeManager.default` instead of creating your own instances.
+    ///   It should cover 99% of your use-cases.
     public init() {
         ThemeManager.managers.insert(WeakBox(self))
     }
@@ -99,14 +104,9 @@ public class ThemeManager {
     {
         let animationDuration = (animated) ? self.animationDuration : 0.0
         if let theme = self.theme as? T {
-            CATransaction.begin()
-            CATransaction.setAnimationDuration(animationDuration)
-            let timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
-            CATransaction.setAnimationTimingFunction(timingFunction)
-//            UIView.animate(withDuration: animationDuration) {
+            UIView.animate(withDuration: animationDuration) {
                 closure(themeable, theme)
-//            }
-            CATransaction.commit()
+            }
         } else {
             var themeManager = self
             withUnsafePointer(to: &themeManager) {
@@ -127,10 +127,12 @@ public class ThemeManager {
     }
 
     fileprivate func notify() {
-        self.notificationCenter.post(
-            name: ThemeManager.notificationName,
-            object: self
-        )
+        DispatchQueue.global().async {
+            self.notificationCenter.post(
+                name: ThemeManager.notificationName,
+                object: self
+            )
+        }
     }
 }
 
@@ -162,12 +164,6 @@ internal class ThemeableObserver {
         return ThemeableObserver(themeable: themeable, manager: manager)
     }
 
-    // Required for iOS 8 and earlier:
-    deinit {
-        NotificationCenter.default.removeObserver(self.themeObserver)
-        NotificationCenter.default.removeObserver(self.dynamicTypeObserver)
-    }
-
     fileprivate func register<T>(_ theme: T.Type, closure: @escaping Observation)
         where T: ThemeProtocol
     {
@@ -183,14 +179,6 @@ internal class ThemeableObserver {
     fileprivate func attach(to themeable: Themeable) {
         var key = Key.associatedObject
         objc_setAssociatedObject(themeable, &key, self, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-    }
-
-    fileprivate func detach() {
-        guard let themeable = self.themeable else {
-            return
-        }
-        var key = Key.associatedObject
-        objc_setAssociatedObject(themeable, &key, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 
     fileprivate func observe(_ themeManager: ThemeManager) {
@@ -229,8 +217,10 @@ internal class ThemeableObserver {
             return
         }
         let animationDuration = themeManager.animated ? themeManager.animationDuration : 0.0
-        UIView.animate(withDuration: animationDuration) {
-            closure(themeable, theme)
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: animationDuration) {
+                closure(themeable, theme)
+            }
         }
     }
 

@@ -46,7 +46,6 @@ class ViewController: UIViewController {
         self.editButtonItem.title = "Switch Light"
 
         ThemeManager.default.apply(theme: Theme.self, to: self) { themeable, theme in
-            print(String(describing: Theme.self))
             themeable.view.backgroundColor = theme.color.background
 
             let navigationBar = themeable.navigationController?.navigationBar
