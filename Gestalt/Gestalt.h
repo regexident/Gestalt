@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double GestaltVersionNumber;
 FOUNDATION_EXPORT const unsigned char GestaltVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Gestalt/PublicHeader.h>
-
-
