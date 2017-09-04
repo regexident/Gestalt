@@ -7,7 +7,12 @@
 //
 
 import Foundation
-import QuartzCore
+
+#if os(iOS)
+import UIKit
+#else
+import AppKit
+#endif
 
 /// Tagging protocol for Gestalt themes
 public protocol ThemeProtocol {}
@@ -104,7 +109,7 @@ public class ThemeManager {
     {
         let animationDuration = (animated) ? self.animationDuration : 0.0
         if let theme = self.theme as? T {
-            UIView.animate(withDuration: animationDuration) {
+            animate(duration: animationDuration) {
                 closure(themeable, theme)
             }
         } else {
@@ -134,6 +139,16 @@ public class ThemeManager {
             )
         }
     }
+}
+
+fileprivate func animate(duration: TimeInterval, closure: @escaping () -> ()) {
+    #if os(iOS)
+        UIView.animate(withDuration: duration) {
+            closure()
+        }
+    #else
+        closure()
+    #endif
 }
 
 internal class ThemeableObserver {
@@ -188,6 +203,7 @@ internal class ThemeableObserver {
             name: ThemeManager.notificationName,
             object: themeManager
         )
+        #if os(iOS)
         if #available(iOS 7, *) {
             NotificationCenter.default.addObserver(
                 self,
@@ -196,6 +212,7 @@ internal class ThemeableObserver {
                 object: nil
             )
         }
+        #endif
     }
 
     @objc private func handleThemeChange(_ notification: Notification) {
@@ -218,7 +235,7 @@ internal class ThemeableObserver {
         }
         let animationDuration = themeManager.animated ? themeManager.animationDuration : 0.0
         DispatchQueue.main.async {
-            UIView.animate(withDuration: animationDuration) {
+            animate(duration: animationDuration) {
                 closure(themeable, theme)
             }
         }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF8F907A1F0AA3350083EFCF /* Gestalt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8F90701F0AA3350083EFCF /* Gestalt.framework */; };
 		BF8F907F1F0AA3350083EFCF /* GestaltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F907E1F0AA3350083EFCF /* GestaltTests.swift */; };
 		BF8F90811F0AA3350083EFCF /* Gestalt.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8F90731F0AA3350083EFCF /* Gestalt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF8F908B1F0AA3490083EFCF /* Gestalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F908A1F0AA3490083EFCF /* Gestalt.swift */; };
@@ -19,22 +18,24 @@
 		BF8F90A41F0AA8740083EFCF /* Gestalt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8F90701F0AA3350083EFCF /* Gestalt.framework */; };
 		BF8F90A51F0AA8740083EFCF /* Gestalt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF8F90701F0AA3350083EFCF /* Gestalt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF8F90AA1F0AAA8D0083EFCF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F90A91F0AAA8D0083EFCF /* Theme.swift */; };
+		BFF7041E1F5DA35F00DFF413 /* Gestalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F908A1F0AA3490083EFCF /* Gestalt.swift */; };
+		BFF704201F5DA49700DFF413 /* libGestalt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF704151F5DA34100DFF413 /* libGestalt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BF8F907B1F0AA3350083EFCF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF8F90671F0AA3350083EFCF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF8F906F1F0AA3350083EFCF;
-			remoteInfo = Gestalt;
-		};
 		BF8F90A61F0AA8740083EFCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF8F90671F0AA3350083EFCF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF8F906F1F0AA3350083EFCF;
 			remoteInfo = Gestalt;
+		};
+		BFF704211F5DA4E200DFF413 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF8F90671F0AA3350083EFCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFF704141F5DA34100DFF413;
+			remoteInfo = "Gestalt (Static)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,6 +49,15 @@
 				BF8F90A51F0AA8740083EFCF /* Gestalt.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFF704131F5DA34100DFF413 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -68,6 +78,8 @@
 		BF8F909E1F0AA7D80083EFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF8F90A21F0AA7EB0083EFCF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BF8F90A91F0AAA8D0083EFCF /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BFF704101F5DA32300DFF413 /* Universal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Universal.xcconfig; sourceTree = "<group>"; };
+		BFF704151F5DA34100DFF413 /* libGestalt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGestalt.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8F907A1F0AA3350083EFCF /* Gestalt.framework in Frameworks */,
+				BFF704201F5DA49700DFF413 /* libGestalt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +103,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF8F90A41F0AA8740083EFCF /* Gestalt.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFF704121F5DA34100DFF413 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +122,9 @@
 				BF8F90721F0AA3350083EFCF /* Gestalt */,
 				BF8F907D1F0AA3350083EFCF /* GestaltTests */,
 				BF8F90911F0AA7D80083EFCF /* GestaltDemo */,
+				BFF7040F1F5DA32300DFF413 /* Configs */,
 				BF8F90711F0AA3350083EFCF /* Products */,
+				BFF7041F1F5DA49700DFF413 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +134,7 @@
 				BF8F90701F0AA3350083EFCF /* Gestalt.framework */,
 				BF8F90791F0AA3350083EFCF /* GestaltTests.xctest */,
 				BF8F90901F0AA7D70083EFCF /* GestaltDemo.app */,
+				BFF704151F5DA34100DFF413 /* libGestalt.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +170,22 @@
 				BF8F909E1F0AA7D80083EFCF /* Info.plist */,
 			);
 			path = GestaltDemo;
+			sourceTree = "<group>";
+		};
+		BFF7040F1F5DA32300DFF413 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				BFF704101F5DA32300DFF413 /* Universal.xcconfig */,
+			);
+			name = Configs;
+			path = Gestalt.xcodeproj/Configs;
+			sourceTree = "<group>";
+		};
+		BFF7041F1F5DA49700DFF413 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +231,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BF8F907C1F0AA3350083EFCF /* PBXTargetDependency */,
+				BFF704221F5DA4E200DFF413 /* PBXTargetDependency */,
 			);
 			name = GestaltTests;
 			productName = GestaltTests;
@@ -219,6 +257,23 @@
 			productReference = BF8F90901F0AA7D70083EFCF /* GestaltDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFF704141F5DA34100DFF413 /* Gestalt (Static) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF7041B1F5DA34100DFF413 /* Build configuration list for PBXNativeTarget "Gestalt (Static)" */;
+			buildPhases = (
+				BFF704111F5DA34100DFF413 /* Sources */,
+				BFF704121F5DA34100DFF413 /* Frameworks */,
+				BFF704131F5DA34100DFF413 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gestalt (Static)";
+			productName = "Gestalt (Static)";
+			productReference = BFF704151F5DA34100DFF413 /* libGestalt.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,7 +281,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Vincent Esche";
 				TargetAttributes = {
 					BF8F906F1F0AA3350083EFCF = {
@@ -242,6 +297,11 @@
 					};
 					BF8F908F1F0AA7D70083EFCF = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = RHSV5Y8MLD;
+						ProvisioningStyle = Automatic;
+					};
+					BFF704141F5DA34100DFF413 = {
+						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = RHSV5Y8MLD;
 						ProvisioningStyle = Automatic;
 					};
@@ -261,6 +321,7 @@
 			projectRoot = "";
 			targets = (
 				BF8F906F1F0AA3350083EFCF /* Gestalt */,
+				BFF704141F5DA34100DFF413 /* Gestalt (Static) */,
 				BF8F90781F0AA3350083EFCF /* GestaltTests */,
 				BF8F908F1F0AA7D70083EFCF /* GestaltDemo */,
 			);
@@ -321,18 +382,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFF704111F5DA34100DFF413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF7041E1F5DA35F00DFF413 /* Gestalt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BF8F907C1F0AA3350083EFCF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF8F906F1F0AA3350083EFCF /* Gestalt */;
-			targetProxy = BF8F907B1F0AA3350083EFCF /* PBXContainerItemProxy */;
-		};
 		BF8F90A71F0AA8740083EFCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF8F906F1F0AA3350083EFCF /* Gestalt */;
 			targetProxy = BF8F90A61F0AA8740083EFCF /* PBXContainerItemProxy */;
+		};
+		BFF704221F5DA4E200DFF413 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFF704141F5DA34100DFF413 /* Gestalt (Static) */;
+			targetProxy = BFF704211F5DA4E200DFF413 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -366,7 +435,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -374,7 +445,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -420,7 +495,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -428,7 +505,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -459,6 +540,7 @@
 		};
 		BF8F90851F0AA3350083EFCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF704101F5DA32300DFF413 /* Universal.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -480,6 +562,7 @@
 		};
 		BF8F90861F0AA3350083EFCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF704101F5DA32300DFF413 /* Universal.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -550,6 +633,52 @@
 			};
 			name = Release;
 		};
+		BFF7041C1F5DA34100DFF413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF704101F5DA32300DFF413 /* Universal.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Gestalt;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFF7041D1F5DA34100DFF413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF704101F5DA32300DFF413 /* Universal.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Gestalt;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,6 +714,15 @@
 			buildConfigurations = (
 				BF8F909F1F0AA7D80083EFCF /* Debug */,
 				BF8F90A01F0AA7D80083EFCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFF7041B1F5DA34100DFF413 /* Build configuration list for PBXNativeTarget "Gestalt (Static)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF7041C1F5DA34100DFF413 /* Debug */,
+				BFF7041D1F5DA34100DFF413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

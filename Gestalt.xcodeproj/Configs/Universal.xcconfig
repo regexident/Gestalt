@@ -1,0 +1,25 @@
+PRODUCT_NAME = $(TARGET_NAME)
+SUPPORTED_PLATFORMS = macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator
+DYLIB_INSTALL_NAME_BASE = @rpath
+OTHER_SWIFT_FLAGS = -DXcode
+
+SDKROOT[sdk=iphone*] = iphoneos
+VALID_ARCHS[sdk=iphone*] = arm64 armv7 armv7s
+IPHONEOS_DEPLOYMENT_TARGET = 10.0
+TARGETED_DEVICE_FAMILY[sdk=iphone*]  = 1,2
+LD_RUNPATH_SEARCH_PATHS[sdk=iphone*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+
+SDKROOT[sdk=appletv*] = appletvos
+TVOS_DEPLOYMENT_TARGET = 10.0
+TARGETED_DEVICE_FAMILY[sdk=appletv*] = 3
+LD_RUNPATH_SEARCH_PATHS[sdk=appletv*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+
+SDKROOT[sdk=watch*] = watchos
+WATCHOS_DEPLOYMENT_TARGET = 3.0
+TARGETED_DEVICE_FAMILY[sdk=watch*] = 4
+LD_RUNPATH_SEARCH_PATHS[sdk=watch*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+
+SDKROOT[sdk=macosx*] = macosx
+VALID_ARCHS[sdk=macosx*] = x86_64
+MACOSX_DEPLOYMENT_TARGET = 10.13
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*] = $(inherited) @executable_path/../Frameworks @loader_path/../Frameworks
