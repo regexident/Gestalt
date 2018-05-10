@@ -132,10 +132,13 @@ public class ThemeManager {
     }
 
     fileprivate func notify() {
-        DispatchQueue.global().async {
-            self.notificationCenter.post(
+        DispatchQueue.global().async { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.notificationCenter.post(
                 name: ThemeManager.notificationName,
-                object: self
+                object: strongSelf
             )
         }
     }
@@ -234,9 +237,12 @@ internal class ThemeableObserver {
             return
         }
         let animationDuration = themeManager.animated ? themeManager.animationDuration : 0.0
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak themeable] in
+            guard let strongThemeable = themeable else {
+                return
+            }
             animate(duration: animationDuration) {
-                closure(themeable, theme)
+                closure(strongThemeable, theme)
             }
         }
     }
