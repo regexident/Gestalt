@@ -80,6 +80,20 @@ or via [Cocoapods](https://cocoapods.org):
 
     pod 'Gestalt'
 
+or via [Swift Package Manager](https://swift.org):
+
+```swift
+let package = Package(
+    name: "GestaltDemo",
+    dependencies: [
+      .package(url: "https://github.com/regexident/Gestalt.git", from: "1.2.1")
+    ],
+    targets: [
+        .target(name: "GestaltDemo", dependencies: [ "Gestalt" ])
+    ]
+)
+```
+
 ## License
 
 **Gestalt** is available under the **MPL-2.0 license**. See the `LICENSE` file for more info.
