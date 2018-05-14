@@ -3,10 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "Gestalt",
-
-    dependencies: [
+    products: [
+        .library(name: "Gestalt", targets: [ "Gestalt" ])
     ],
-
+    dependencies: [],
     targets: [
         .target    (name         : "Gestalt", 
                     path         : "Gestalt"),
