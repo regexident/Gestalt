@@ -1,0 +1,49 @@
+//
+//  AssetPalette.swift
+//  GestaltDemo
+//
+//  Created by Vincent Esche on 5/15/18.
+//  Copyright © 2018 Vincent Esche. All rights reserved.
+//
+
+import UIKit
+
+struct StageDesignViewAssetPalette: PaletteProtocol {
+    let lightImage: UIImage = UIImage(named: "Light")!
+    let fixtureImage: UIImage
+    let shadowImage: UIImage = UIImage(named: "Shadow")!
+
+    static var `default`: StageDesignViewAssetPalette {
+        return StageDesignViewAssetPalette.light
+    }
+
+    static let light: StageDesignViewAssetPalette = .init(
+        fixtureImage: UIImage(named: "FixtureLight")!
+    )
+    static let dark: StageDesignViewAssetPalette = .init(
+        fixtureImage: UIImage(named: "FixtureDark")!
+    )
+
+    static var debug: StageDesignViewAssetPalette {
+        return StageDesignViewAssetPalette.default
+    }
+}
+
+struct AssetPalette: PaletteProtocol {
+    let stageDesign: StageDesignViewAssetPalette
+
+    static var `default`: AssetPalette {
+        return AssetPalette.light
+    }
+
+    static let light: AssetPalette = .init(
+        stageDesign: .light
+    )
+    static let dark: AssetPalette = .init(
+        stageDesign: .dark
+    )
+
+    static let debug: AssetPalette = .init(
+        stageDesign: .debug
+    )
+}

@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF588FA320AACCE100EC028B /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FA220AACCE100EC028B /* ColorPalette.swift */; };
+		BF588FA520AACFDF00EC028B /* FontPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FA420AACFDF00EC028B /* FontPalette.swift */; };
+		BF588FA820AAD0D400EC028B /* BlokkNeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FA720AAD0D400EC028B /* BlokkNeue.swift */; };
+		BF588FAB20AAD45300EC028B /* SystemFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FAA20AAD45300EC028B /* SystemFont.swift */; };
+		BF588FAD20AAD8BA00EC028B /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FAC20AAD8BA00EC028B /* UIFont+Extensions.swift */; };
+		BF588FAF20AADA8700EC028B /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FAE20AADA8700EC028B /* Palette.swift */; };
+		BF588FB220AADB7F00EC028B /* ViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB120AADB7F00EC028B /* ViewTheme.swift */; };
+		BF588FB420AADB9E00EC028B /* NavigationBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB320AADB9E00EC028B /* NavigationBarTheme.swift */; };
+		BF588FB720AADC6300EC028B /* AssetPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB620AADC6300EC028B /* AssetPalette.swift */; };
+		BF588FBA20AADF6400EC028B /* StylePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB920AADF6400EC028B /* StylePalette.swift */; };
+		BF588FBD20AAE31E00EC028B /* TextFieldTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FBC20AAE31E00EC028B /* TextFieldTheme.swift */; };
+		BF588FBF20AAE62700EC028B /* StageDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FBE20AAE62700EC028B /* StageDesignView.swift */; };
+		BF588FC220AAE73B00EC028B /* StageDesignViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FC120AAE73B00EC028B /* StageDesignViewTheme.swift */; };
+		BF588FC420AAF39900EC028B /* SegmentedControlTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FC320AAF39900EC028B /* SegmentedControlTheme.swift */; };
+		BF588FC620AAF4B200EC028B /* ActivityIndicatorViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FC520AAF4B200EC028B /* ActivityIndicatorViewTheme.swift */; };
+		BF588FC820AAF54900EC028B /* StepperViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FC720AAF54900EC028B /* StepperViewTheme.swift */; };
+		BF588FCA20AAF5E800EC028B /* SwitchTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FC920AAF5E800EC028B /* SwitchTheme.swift */; };
+		BF588FCC20AAF6CA00EC028B /* SliderTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FCB20AAF6CA00EC028B /* SliderTheme.swift */; };
+		BF588FCE20AAF72500EC028B /* ButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FCD20AAF72500EC028B /* ButtonTheme.swift */; };
+		BF588FD020AAF8E600EC028B /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FCF20AAF8E600EC028B /* DemoView.swift */; };
+		BF588FD220AAF97900EC028B /* DemoViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FD120AAF97900EC028B /* DemoViewTheme.swift */; };
 		BF8F907F1F0AA3350083EFCF /* GestaltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F907E1F0AA3350083EFCF /* GestaltTests.swift */; };
 		BF8F90811F0AA3350083EFCF /* Gestalt.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8F90731F0AA3350083EFCF /* Gestalt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF8F908B1F0AA3490083EFCF /* Gestalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F908A1F0AA3490083EFCF /* Gestalt.swift */; };
@@ -14,7 +35,7 @@
 		BF8F90981F0AA7D80083EFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8F90961F0AA7D80083EFCF /* Main.storyboard */; };
 		BF8F909A1F0AA7D80083EFCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8F90991F0AA7D80083EFCF /* Assets.xcassets */; };
 		BF8F909D1F0AA7D80083EFCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8F909B1F0AA7D80083EFCF /* LaunchScreen.storyboard */; };
-		BF8F90A31F0AA7EB0083EFCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F90A21F0AA7EB0083EFCF /* ViewController.swift */; };
+		BF8F90A31F0AA7EB0083EFCF /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F90A21F0AA7EB0083EFCF /* DemoViewController.swift */; };
 		BF8F90A41F0AA8740083EFCF /* Gestalt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8F90701F0AA3350083EFCF /* Gestalt.framework */; };
 		BF8F90A51F0AA8740083EFCF /* Gestalt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF8F90701F0AA3350083EFCF /* Gestalt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF8F90AA1F0AAA8D0083EFCF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F90A91F0AAA8D0083EFCF /* Theme.swift */; };
@@ -63,6 +84,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF588FA220AACCE100EC028B /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		BF588FA420AACFDF00EC028B /* FontPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPalette.swift; sourceTree = "<group>"; };
+		BF588FA720AAD0D400EC028B /* BlokkNeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlokkNeue.swift; sourceTree = "<group>"; };
+		BF588FAA20AAD45300EC028B /* SystemFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFont.swift; sourceTree = "<group>"; };
+		BF588FAC20AAD8BA00EC028B /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		BF588FAE20AADA8700EC028B /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		BF588FB120AADB7F00EC028B /* ViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTheme.swift; sourceTree = "<group>"; };
+		BF588FB320AADB9E00EC028B /* NavigationBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTheme.swift; sourceTree = "<group>"; };
+		BF588FB620AADC6300EC028B /* AssetPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPalette.swift; sourceTree = "<group>"; };
+		BF588FB920AADF6400EC028B /* StylePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePalette.swift; sourceTree = "<group>"; };
+		BF588FBC20AAE31E00EC028B /* TextFieldTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTheme.swift; sourceTree = "<group>"; };
+		BF588FBE20AAE62700EC028B /* StageDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDesignView.swift; sourceTree = "<group>"; };
+		BF588FC120AAE73B00EC028B /* StageDesignViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDesignViewTheme.swift; sourceTree = "<group>"; };
+		BF588FC320AAF39900EC028B /* SegmentedControlTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlTheme.swift; sourceTree = "<group>"; };
+		BF588FC520AAF4B200EC028B /* ActivityIndicatorViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewTheme.swift; sourceTree = "<group>"; };
+		BF588FC720AAF54900EC028B /* StepperViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperViewTheme.swift; sourceTree = "<group>"; };
+		BF588FC920AAF5E800EC028B /* SwitchTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTheme.swift; sourceTree = "<group>"; };
+		BF588FCB20AAF6CA00EC028B /* SliderTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTheme.swift; sourceTree = "<group>"; };
+		BF588FCD20AAF72500EC028B /* ButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTheme.swift; sourceTree = "<group>"; };
+		BF588FCF20AAF8E600EC028B /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		BF588FD120AAF97900EC028B /* DemoViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewTheme.swift; sourceTree = "<group>"; };
 		BF8F90701F0AA3350083EFCF /* Gestalt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gestalt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8F90731F0AA3350083EFCF /* Gestalt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gestalt.h; sourceTree = "<group>"; };
 		BF8F90741F0AA3350083EFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +118,7 @@
 		BF8F90991F0AA7D80083EFCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF8F909C1F0AA7D80083EFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF8F909E1F0AA7D80083EFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF8F90A21F0AA7EB0083EFCF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BF8F90A21F0AA7EB0083EFCF /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DemoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BF8F90A91F0AAA8D0083EFCF /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BFF704101F5DA32300DFF413 /* Universal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Universal.xcconfig; sourceTree = "<group>"; };
 		BFF704151F5DA34100DFF413 /* libGestalt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGestalt.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +158,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF588FA620AAD0C700EC028B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF588FA420AACFDF00EC028B /* FontPalette.swift */,
+				BF588FA720AAD0D400EC028B /* BlokkNeue.swift */,
+				BF588FAA20AAD45300EC028B /* SystemFont.swift */,
+				BF588FAC20AAD8BA00EC028B /* UIFont+Extensions.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BF588FA920AAD1B500EC028B /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				BF588FA220AACCE100EC028B /* ColorPalette.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		BF588FB020AADA8B00EC028B /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				BF588FAE20AADA8700EC028B /* Palette.swift */,
+				BF588FBB20AADF6800EC028B /* Styles */,
+				BF588FB820AADC7500EC028B /* Assets */,
+				BF588FA920AAD1B500EC028B /* Colors */,
+				BF588FA620AAD0C700EC028B /* Fonts */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		BF588FB520AADBA200EC028B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				BF8F90A91F0AAA8D0083EFCF /* Theme.swift */,
+				BF588FC120AAE73B00EC028B /* StageDesignViewTheme.swift */,
+				BF588FD120AAF97900EC028B /* DemoViewTheme.swift */,
+				BF588FC020AAE72E00EC028B /* UIAppearance */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		BF588FB820AADC7500EC028B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BF588FB620AADC6300EC028B /* AssetPalette.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BF588FBB20AADF6800EC028B /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				BF588FB920AADF6400EC028B /* StylePalette.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		BF588FC020AAE72E00EC028B /* UIAppearance */ = {
+			isa = PBXGroup;
+			children = (
+				BF588FB320AADB9E00EC028B /* NavigationBarTheme.swift */,
+				BF588FBC20AAE31E00EC028B /* TextFieldTheme.swift */,
+				BF588FC320AAF39900EC028B /* SegmentedControlTheme.swift */,
+				BF588FC520AAF4B200EC028B /* ActivityIndicatorViewTheme.swift */,
+				BF588FC720AAF54900EC028B /* StepperViewTheme.swift */,
+				BF588FC920AAF5E800EC028B /* SwitchTheme.swift */,
+				BF588FCB20AAF6CA00EC028B /* SliderTheme.swift */,
+				BF588FCD20AAF72500EC028B /* ButtonTheme.swift */,
+			);
+			path = UIAppearance;
+			sourceTree = "<group>";
+		};
 		BF8F90661F0AA3350083EFCF = {
 			isa = PBXGroup;
 			children = (
@@ -161,9 +276,13 @@
 		BF8F90911F0AA7D80083EFCF /* GestaltDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BF8F90A91F0AAA8D0083EFCF /* Theme.swift */,
+				BF588FB120AADB7F00EC028B /* ViewTheme.swift */,
+				BF588FB520AADBA200EC028B /* Theme */,
+				BF588FB020AADA8B00EC028B /* Palette */,
 				BF8F90921F0AA7D80083EFCF /* AppDelegate.swift */,
-				BF8F90A21F0AA7EB0083EFCF /* ViewController.swift */,
+				BF8F90A21F0AA7EB0083EFCF /* DemoViewController.swift */,
+				BF588FCF20AAF8E600EC028B /* DemoView.swift */,
+				BF588FBE20AAE62700EC028B /* StageDesignView.swift */,
 				BF8F90961F0AA7D80083EFCF /* Main.storyboard */,
 				BF8F90991F0AA7D80083EFCF /* Assets.xcassets */,
 				BF8F909B1F0AA7D80083EFCF /* LaunchScreen.storyboard */,
@@ -377,9 +496,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF588FCA20AAF5E800EC028B /* SwitchTheme.swift in Sources */,
+				BF588FB220AADB7F00EC028B /* ViewTheme.swift in Sources */,
 				BF8F90AA1F0AAA8D0083EFCF /* Theme.swift in Sources */,
-				BF8F90A31F0AA7EB0083EFCF /* ViewController.swift in Sources */,
+				BF588FB720AADC6300EC028B /* AssetPalette.swift in Sources */,
+				BF588FBD20AAE31E00EC028B /* TextFieldTheme.swift in Sources */,
+				BF8F90A31F0AA7EB0083EFCF /* DemoViewController.swift in Sources */,
+				BF588FAD20AAD8BA00EC028B /* UIFont+Extensions.swift in Sources */,
+				BF588FC820AAF54900EC028B /* StepperViewTheme.swift in Sources */,
+				BF588FAF20AADA8700EC028B /* Palette.swift in Sources */,
+				BF588FD220AAF97900EC028B /* DemoViewTheme.swift in Sources */,
+				BF588FBF20AAE62700EC028B /* StageDesignView.swift in Sources */,
+				BF588FB420AADB9E00EC028B /* NavigationBarTheme.swift in Sources */,
+				BF588FC220AAE73B00EC028B /* StageDesignViewTheme.swift in Sources */,
+				BF588FCC20AAF6CA00EC028B /* SliderTheme.swift in Sources */,
+				BF588FCE20AAF72500EC028B /* ButtonTheme.swift in Sources */,
 				BF8F90931F0AA7D80083EFCF /* AppDelegate.swift in Sources */,
+				BF588FA520AACFDF00EC028B /* FontPalette.swift in Sources */,
+				BF588FC420AAF39900EC028B /* SegmentedControlTheme.swift in Sources */,
+				BF588FAB20AAD45300EC028B /* SystemFont.swift in Sources */,
+				BF588FA820AAD0D400EC028B /* BlokkNeue.swift in Sources */,
+				BF588FD020AAF8E600EC028B /* DemoView.swift in Sources */,
+				BF588FBA20AADF6400EC028B /* StylePalette.swift in Sources */,
+				BF588FC620AAF4B200EC028B /* ActivityIndicatorViewTheme.swift in Sources */,
+				BF588FA320AACCE100EC028B /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -533,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -620,7 +760,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GestaltDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.GestaltDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,7 +773,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GestaltDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.GestaltDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
