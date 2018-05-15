@@ -16,9 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
 
-        ThemeManager.default.theme = Theme.light
+        ThemeManager.default.theme = Theme.default
+
+        ThemeManager.default.apply(theme: Theme.self, to: self) { themable, theme in
+            UINavigationBar.apply(theme: theme.default.navigationBar)
+            UITextField.apply(theme: theme.default.textfield)
+            UISegmentedControl.apply(theme: theme.default.segmentedControl)
+            UIActivityIndicatorView.apply(theme: theme.default.activityIndicator)
+            UIStepper.apply(theme: theme.default.stepper)
+            UISwitch.apply(theme: theme.default.switch)
+            UISlider.apply(theme: theme.default.slider)
+            UIButton.apply(theme: theme.default.button)
+            
+            for window in UIApplication.shared.windows {
+                for view in window.subviews {
+                    view.removeFromSuperview()
+                    window.addSubview(view)
+                }
+            }
+        }
 
         return true
     }
