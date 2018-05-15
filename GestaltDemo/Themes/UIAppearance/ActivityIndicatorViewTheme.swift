@@ -8,7 +8,9 @@
 
 import UIKit
 
-struct ActivityIndicatorViewTheme: ViewTheme {
+import Gestalt
+
+struct ActivityIndicatorViewTheme: AppearanceTheme {
     typealias View = UIActivityIndicatorView
 
     let color: UIColor
@@ -24,4 +26,4 @@ struct ActivityIndicatorViewTheme: ViewTheme {
     }
 }
 
-extension ActivityIndicatorViewTheme.View: ThemableView {}
+extension ActivityIndicatorViewTheme.View: AppearanceThemeView {}

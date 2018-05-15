@@ -1,5 +1,5 @@
 //
-//  SliderTheme.swift
+//  SwitchTheme.swift
 //  GestaltDemo
 //
 //  Created by Vincent Esche on 5/15/18.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-struct SliderTheme: ViewTheme {
-    typealias View = UISlider
+import Gestalt
+
+struct SwitchTheme: AppearanceTheme {
+    typealias View = UISwitch
 
     let tintColor: UIColor
 
@@ -24,4 +26,4 @@ struct SliderTheme: ViewTheme {
     }
 }
 
-extension SliderTheme.View: ThemableView {}
+extension SwitchTheme.View: AppearanceThemeView {}
