@@ -1,5 +1,5 @@
 //
-//  SegmentedControlTheme.swift
+//  ButtonTheme.swift
 //  GestaltDemo
 //
 //  Created by Vincent Esche on 5/15/18.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-struct SegmentedControlTheme: ViewTheme {
-    typealias View = UISegmentedControl
+import Gestalt
+
+struct ButtonTheme: AppearanceTheme {
+    typealias View = UIButton
 
     let tintColor: UIColor
 
@@ -24,4 +26,4 @@ struct SegmentedControlTheme: ViewTheme {
     }
 }
 
-extension SegmentedControlTheme.View: ThemableView {}
+extension ButtonTheme.View: AppearanceThemeView {}

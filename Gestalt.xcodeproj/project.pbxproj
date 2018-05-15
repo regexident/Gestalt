@@ -13,7 +13,6 @@
 		BF588FAB20AAD45300EC028B /* SystemFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FAA20AAD45300EC028B /* SystemFont.swift */; };
 		BF588FAD20AAD8BA00EC028B /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FAC20AAD8BA00EC028B /* UIFont+Extensions.swift */; };
 		BF588FAF20AADA8700EC028B /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FAE20AADA8700EC028B /* Palette.swift */; };
-		BF588FB220AADB7F00EC028B /* ViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB120AADB7F00EC028B /* ViewTheme.swift */; };
 		BF588FB420AADB9E00EC028B /* NavigationBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB320AADB9E00EC028B /* NavigationBarTheme.swift */; };
 		BF588FB720AADC6300EC028B /* AssetPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB620AADC6300EC028B /* AssetPalette.swift */; };
 		BF588FBA20AADF6400EC028B /* StylePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FB920AADF6400EC028B /* StylePalette.swift */; };
@@ -90,7 +89,6 @@
 		BF588FAA20AAD45300EC028B /* SystemFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFont.swift; sourceTree = "<group>"; };
 		BF588FAC20AAD8BA00EC028B /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		BF588FAE20AADA8700EC028B /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
-		BF588FB120AADB7F00EC028B /* ViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTheme.swift; sourceTree = "<group>"; };
 		BF588FB320AADB9E00EC028B /* NavigationBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTheme.swift; sourceTree = "<group>"; };
 		BF588FB620AADC6300EC028B /* AssetPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPalette.swift; sourceTree = "<group>"; };
 		BF588FB920AADF6400EC028B /* StylePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePalette.swift; sourceTree = "<group>"; };
@@ -177,7 +175,7 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
-		BF588FB020AADA8B00EC028B /* Palette */ = {
+		BF588FB020AADA8B00EC028B /* Palettes */ = {
 			isa = PBXGroup;
 			children = (
 				BF588FAE20AADA8700EC028B /* Palette.swift */,
@@ -186,10 +184,10 @@
 				BF588FA920AAD1B500EC028B /* Colors */,
 				BF588FA620AAD0C700EC028B /* Fonts */,
 			);
-			path = Palette;
+			path = Palettes;
 			sourceTree = "<group>";
 		};
-		BF588FB520AADBA200EC028B /* Theme */ = {
+		BF588FB520AADBA200EC028B /* Themes */ = {
 			isa = PBXGroup;
 			children = (
 				BF8F90A91F0AAA8D0083EFCF /* Theme.swift */,
@@ -197,7 +195,7 @@
 				BF588FD120AAF97900EC028B /* DemoViewTheme.swift */,
 				BF588FC020AAE72E00EC028B /* UIAppearance */,
 			);
-			path = Theme;
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		BF588FB820AADC7500EC028B /* Assets */ = {
@@ -229,6 +227,15 @@
 				BF588FCD20AAF72500EC028B /* ButtonTheme.swift */,
 			);
 			path = UIAppearance;
+			sourceTree = "<group>";
+		};
+		BF588FD320AAFC4400EC028B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF588FCF20AAF8E600EC028B /* DemoView.swift */,
+				BF588FBE20AAE62700EC028B /* StageDesignView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BF8F90661F0AA3350083EFCF = {
@@ -276,13 +283,11 @@
 		BF8F90911F0AA7D80083EFCF /* GestaltDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BF588FB120AADB7F00EC028B /* ViewTheme.swift */,
-				BF588FB520AADBA200EC028B /* Theme */,
-				BF588FB020AADA8B00EC028B /* Palette */,
+				BF588FB520AADBA200EC028B /* Themes */,
+				BF588FB020AADA8B00EC028B /* Palettes */,
+				BF588FD320AAFC4400EC028B /* Views */,
 				BF8F90921F0AA7D80083EFCF /* AppDelegate.swift */,
 				BF8F90A21F0AA7EB0083EFCF /* DemoViewController.swift */,
-				BF588FCF20AAF8E600EC028B /* DemoView.swift */,
-				BF588FBE20AAE62700EC028B /* StageDesignView.swift */,
 				BF8F90961F0AA7D80083EFCF /* Main.storyboard */,
 				BF8F90991F0AA7D80083EFCF /* Assets.xcassets */,
 				BF8F909B1F0AA7D80083EFCF /* LaunchScreen.storyboard */,
@@ -497,7 +502,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF588FCA20AAF5E800EC028B /* SwitchTheme.swift in Sources */,
-				BF588FB220AADB7F00EC028B /* ViewTheme.swift in Sources */,
 				BF8F90AA1F0AAA8D0083EFCF /* Theme.swift in Sources */,
 				BF588FB720AADC6300EC028B /* AssetPalette.swift in Sources */,
 				BF588FBD20AAE31E00EC028B /* TextFieldTheme.swift in Sources */,

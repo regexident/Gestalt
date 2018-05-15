@@ -8,7 +8,9 @@
 
 import UIKit
 
-struct TextFieldTheme: ViewTheme {
+import Gestalt
+
+struct TextFieldTheme: AppearanceTheme {
     typealias View = UITextField
 
     let font: UIFont
@@ -33,4 +35,4 @@ struct TextFieldTheme: ViewTheme {
     }
 }
 
-extension TextFieldTheme.View: ThemableView {}
+extension TextFieldTheme.View: AppearanceThemeView {}

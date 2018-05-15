@@ -8,7 +8,9 @@
 
 import UIKit
 
-struct NavigationBarTheme: ViewTheme {
+import Gestalt
+
+struct NavigationBarTheme: AppearanceTheme {
     typealias View = UINavigationBar
 
     let barStyle: UIBarStyle
@@ -37,4 +39,4 @@ struct NavigationBarTheme: ViewTheme {
     }
 }
 
-extension NavigationBarTheme.View: ThemableView {}
+extension NavigationBarTheme.View: AppearanceThemeView {}

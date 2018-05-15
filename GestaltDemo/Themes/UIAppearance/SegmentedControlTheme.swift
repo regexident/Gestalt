@@ -1,5 +1,5 @@
 //
-//  StepperViewTheme.swift
+//  SegmentedControlTheme.swift
 //  GestaltDemo
 //
 //  Created by Vincent Esche on 5/15/18.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-struct StepperTheme: ViewTheme {
-    typealias View = UIStepper
+import Gestalt
+
+struct SegmentedControlTheme: AppearanceTheme {
+    typealias View = UISegmentedControl
 
     let tintColor: UIColor
 
@@ -24,4 +26,4 @@ struct StepperTheme: ViewTheme {
     }
 }
 
-extension StepperTheme.View: ThemableView {}
+extension SegmentedControlTheme.View: AppearanceThemeView {}

@@ -14,6 +14,22 @@ import UIKit
 import AppKit
 #endif
 
+#if os(iOS)
+public protocol AppearanceTheme {
+    associatedtype View: AppearanceThemeView
+    // Theme all views through appearance proxy
+    func theme(_ klass: View.Type)
+}
+
+public protocol AppearanceThemeView: UIAppearance {}
+
+extension AppearanceThemeView {
+    public static func apply<Theme: AppearanceTheme>(theme: Theme) where Theme.View == Self {
+        theme.theme(self)
+    }
+}
+#endif
+
 /// Tagging protocol for Gestalt themes
 public protocol ThemeProtocol {}
 

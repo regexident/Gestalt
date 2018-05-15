@@ -1,5 +1,5 @@
 //
-//  ButtonTheme.swift
+//  StepperViewTheme.swift
 //  GestaltDemo
 //
 //  Created by Vincent Esche on 5/15/18.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-struct ButtonTheme: ViewTheme {
-    typealias View = UIButton
+import Gestalt
+
+struct StepperTheme: AppearanceTheme {
+    typealias View = UIStepper
 
     let tintColor: UIColor
 
@@ -24,4 +26,4 @@ struct ButtonTheme: ViewTheme {
     }
 }
 
-extension ButtonTheme.View: ThemableView {}
+extension StepperTheme.View: AppearanceThemeView {}
