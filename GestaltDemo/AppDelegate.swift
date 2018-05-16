@@ -19,8 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
 
+        // This window hack if not necessary for Gestalt inn general:
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let window = ShakeableWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = storyboard.instantiateInitialViewController()
+        window.makeKeyAndVisible()
+        self.window = window
+
+        // This line however is:
         ThemeManager.default.theme = Theme.default
 
+        // As is this block if you're doing any UIAppearance-related theming:
         ThemeManager.default.apply(theme: Theme.self, to: self) { themable, theme in
             UINavigationBar.apply(theme: theme.default.navigationBar)
             UITextField.apply(theme: theme.default.textfield)
