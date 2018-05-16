@@ -13,13 +13,10 @@ struct StageDesignViewAssetPalette: PaletteProtocol {
     let fixtureImage: UIImage
     let shadowImage: UIImage = UIImage(named: "Shadow")!
 
-    static var `default`: StageDesignViewAssetPalette {
-        return StageDesignViewAssetPalette.light
-    }
-
     static let light: StageDesignViewAssetPalette = .init(
         fixtureImage: UIImage(named: "FixtureLight")!
     )
+    
     static let dark: StageDesignViewAssetPalette = .init(
         fixtureImage: UIImage(named: "FixtureDark")!
     )
@@ -32,13 +29,10 @@ struct StageDesignViewAssetPalette: PaletteProtocol {
 struct AssetPalette: PaletteProtocol {
     let stageDesign: StageDesignViewAssetPalette
 
-    static var `default`: AssetPalette {
-        return AssetPalette.light
-    }
-
     static let light: AssetPalette = .init(
         stageDesign: .light
     )
+
     static let dark: AssetPalette = .init(
         stageDesign: .dark
     )

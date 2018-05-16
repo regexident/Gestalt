@@ -27,10 +27,6 @@ struct ColorPalette: PaletteProtocol {
     let `static`: StaticPalette
     let dynamic: DynamicPalette
 
-    static var `default`: ColorPalette {
-        return ColorPalette.light
-    }
-
     static let light: ColorPalette = .init(
         static: .init(
             brand: UIColor(hue:0.568, saturation:0.683, brightness:0.854, alpha:1) // UIKonf blue

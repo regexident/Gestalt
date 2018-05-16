@@ -31,14 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // As is this block if you're doing any UIAppearance-related theming:
         ThemeManager.default.apply(theme: Theme.self, to: self) { themable, theme in
-            UINavigationBar.apply(theme: theme.default.navigationBar)
-            UITextField.apply(theme: theme.default.textfield)
-            UISegmentedControl.apply(theme: theme.default.segmentedControl)
-            UIActivityIndicatorView.apply(theme: theme.default.activityIndicator)
-            UIStepper.apply(theme: theme.default.stepper)
-            UISwitch.apply(theme: theme.default.switch)
-            UISlider.apply(theme: theme.default.slider)
-            UIButton.apply(theme: theme.default.button)
+            UINavigationBar.apply(theme: theme.native.navigationBar)
+            UITextField.apply(theme: theme.native.textfield)
+            UISegmentedControl.apply(theme: theme.native.segmentedControl)
+            UIActivityIndicatorView.apply(theme: theme.native.activityIndicator)
+            UIStepper.apply(theme: theme.native.stepper)
+            UISwitch.apply(theme: theme.native.switch)
+            UISlider.apply(theme: theme.native.slider)
+            UIButton.apply(theme: theme.native.button)
             
             for window in UIApplication.shared.windows {
                 for view in window.subviews {

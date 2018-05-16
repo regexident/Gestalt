@@ -10,7 +10,7 @@ import UIKit
 
 import Gestalt
 
-struct DefaultTheme {
+struct NativeTheme {
     let navigationBar: NavigationBarTheme
     let textfield: TextFieldTheme
     let segmentedControl: SegmentedControlTheme
@@ -33,7 +33,7 @@ struct CustomTheme {
 }
 
 struct Theme: ThemeProtocol {
-    let `default`: DefaultTheme
+    let native: NativeTheme
     let custom: CustomTheme
 
     static var `default`: Theme {
@@ -48,7 +48,7 @@ struct Theme: ThemeProtocol {
 extension Theme {
     init(palette: Palette) {
         self.init(
-            default: .init(
+            native: .init(
                 navigationBar: .init(palette: palette),
                 textfield: .init(palette: palette),
                 segmentedControl: .init(palette: palette),
