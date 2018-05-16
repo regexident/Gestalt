@@ -29,7 +29,6 @@ class ShakeableWindow: UIWindow {
         } else {
             ThemeManager.default.theme = Theme.debug
             self.previousTheme = ThemeManager.default.theme
-
         }
         self.debugThemeEnabled = !self.debugThemeEnabled
     }

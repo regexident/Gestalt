@@ -22,7 +22,9 @@ struct StageDesignViewAssetPalette: PaletteProtocol {
     )
 
     static var debug: StageDesignViewAssetPalette {
-        return StageDesignViewAssetPalette.default
+        let image = UIImage(named: "FixtureLight")!
+        let tintedImage = image.tinted(color: UIColor.magenta, blendMode: .color)!
+        return StageDesignViewAssetPalette(fixtureImage: tintedImage)
     }
 }
 
