@@ -21,14 +21,6 @@ struct DynamicPalette {
     let complementary: UIColor
 
     let tint: UIColor
-
-//    let shadow: UIColor
-
-//    let success: UIColor
-//    let warning: UIColor
-//    let error: UIColor
-//
-//    let destructive: UIColor
 }
 
 struct ColorPalette: PaletteProtocol {

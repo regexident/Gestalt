@@ -116,7 +116,7 @@ public class ThemeManager {
     ///   of `var animated: Bool` for the initial call of the closure.
     ///
     /// - Important:
-    ///   1. Within `closure` any access on `themeable` should only achieved through
+    ///   1. Within `closure` any access on `themeable` should only be achieved through
     ///      the closure's `$0` argument, not directly, to avoid retain cycles.
     ///   2. The body of `closure` should be [idempotent](https://en.wikipedia.org/wiki/Idempotence)
     ///      to avoid unwanted side-effects on repeated calls.
@@ -136,7 +136,7 @@ public class ThemeManager {
         }
         let observer = ThemeableObserver.gestaltObserver(for: themeable, on: self)
         observer.observe(self)
-        observer.register(theme.self) {themeable, theme in
+        observer.register(theme.self) { themeable, theme in
             guard let themeable = themeable as? U else {
                 return
             }
