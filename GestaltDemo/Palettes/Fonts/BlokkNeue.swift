@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Font from: http://www.blokkfont.com/
 enum BlokkNeueFont {
     static let fontName = "BLOKKNeue"
 
