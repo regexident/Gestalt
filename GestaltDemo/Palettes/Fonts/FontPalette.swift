@@ -31,10 +31,6 @@ struct FontPalette: PaletteProtocol {
     let dynamic: DynamicFontPalette
     let `static`: StaticFontPalette
 
-    static var `default`: FontPalette {
-        return FontPalette.light
-    }
-
     static let light: FontPalette = .init(
         dynamic: .init(
             title1: UIFont.preferredFont(forTextStyle: .title1),

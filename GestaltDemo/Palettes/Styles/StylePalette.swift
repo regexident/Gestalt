@@ -12,10 +12,6 @@ struct StageDesignViewStylePalette: PaletteProtocol {
     let lightOpacity: Float
     let shadowOpacity: Float
 
-    static var `default`: StageDesignViewStylePalette {
-        return StageDesignViewStylePalette.light
-    }
-
     static let light: StageDesignViewStylePalette = .init(
         lightOpacity: 0.0,
         shadowOpacity: 0.0
@@ -27,7 +23,7 @@ struct StageDesignViewStylePalette: PaletteProtocol {
     )
 
     static var debug: StageDesignViewStylePalette {
-        return StageDesignViewStylePalette.default
+        return StageDesignViewStylePalette.light
     }
 }
 
@@ -37,15 +33,12 @@ struct StylePalette: PaletteProtocol {
     let barStyle: UIBarStyle
     let borderStyle: UITextBorderStyle
 
-    static var `default`: StylePalette {
-        return StylePalette.light
-    }
-
     static let light: StylePalette = .init(
         stageDesign: .light,
         barStyle: .default,
         borderStyle: .roundedRect
     )
+    
     static let dark: StylePalette = .init(
         stageDesign: .dark,
         barStyle: .black,
@@ -53,6 +46,6 @@ struct StylePalette: PaletteProtocol {
     )
 
     static var debug: StylePalette {
-        return StylePalette.default
+        return StylePalette.light
     }
 }

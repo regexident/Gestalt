@@ -9,8 +9,6 @@
 import UIKit
 
 protocol PaletteProtocol {
-    static var `default`: Self { get }
-
     static var light: Self { get }
     static var dark: Self { get }
 
@@ -22,10 +20,6 @@ struct Palette: PaletteProtocol {
     let fonts: FontPalette
     let assets: AssetPalette
     let styles: StylePalette
-
-    static var `default`: Palette {
-        return self.light
-    }
 
     static let light: Palette = .init(
         colors: .light,
