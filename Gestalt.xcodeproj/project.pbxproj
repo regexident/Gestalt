@@ -27,6 +27,7 @@
 		BF588FCE20AAF72500EC028B /* ButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FCD20AAF72500EC028B /* ButtonTheme.swift */; };
 		BF588FD020AAF8E600EC028B /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FCF20AAF8E600EC028B /* DemoView.swift */; };
 		BF588FD220AAF97900EC028B /* DemoViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FD120AAF97900EC028B /* DemoViewTheme.swift */; };
+		BF588FDA20AB0E1D00EC028B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = BF588FD920AB0E1D00EC028B /* Fonts */; };
 		BF8F907F1F0AA3350083EFCF /* GestaltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F907E1F0AA3350083EFCF /* GestaltTests.swift */; };
 		BF8F90811F0AA3350083EFCF /* Gestalt.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8F90731F0AA3350083EFCF /* Gestalt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF8F908B1F0AA3490083EFCF /* Gestalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F908A1F0AA3490083EFCF /* Gestalt.swift */; };
@@ -103,6 +104,7 @@
 		BF588FCD20AAF72500EC028B /* ButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTheme.swift; sourceTree = "<group>"; };
 		BF588FCF20AAF8E600EC028B /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		BF588FD120AAF97900EC028B /* DemoViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewTheme.swift; sourceTree = "<group>"; };
+		BF588FD920AB0E1D00EC028B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		BF8F90701F0AA3350083EFCF /* Gestalt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gestalt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8F90731F0AA3350083EFCF /* Gestalt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gestalt.h; sourceTree = "<group>"; };
 		BF8F90741F0AA3350083EFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				BF8F90961F0AA7D80083EFCF /* Main.storyboard */,
 				BF8F90991F0AA7D80083EFCF /* Assets.xcassets */,
 				BF8F909B1F0AA7D80083EFCF /* LaunchScreen.storyboard */,
+				BF588FD920AB0E1D00EC028B /* Fonts */,
 				BF8F909E1F0AA7D80083EFCF /* Info.plist */,
 			);
 			path = GestaltDemo;
@@ -475,6 +478,7 @@
 				BF8F909D1F0AA7D80083EFCF /* LaunchScreen.storyboard in Resources */,
 				BF8F909A1F0AA7D80083EFCF /* Assets.xcassets in Resources */,
 				BF8F90981F0AA7D80083EFCF /* Main.storyboard in Resources */,
+				BF588FDA20AB0E1D00EC028B /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

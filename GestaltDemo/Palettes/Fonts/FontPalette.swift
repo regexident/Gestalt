@@ -73,9 +73,9 @@ struct FontPalette: PaletteProtocol {
             caption2: BlokkNeueFont.with(textStyle: .caption2)
         ),
         static: .init(
-            navigationBarTitle: UIFont.systemFont(ofSize: 18.0, weight: .bold),
-            label: UIFont.systemFont(ofSize: 17.0, weight: .bold),
-            textfield: UIFont.systemFont(ofSize: 14.0, weight: .bold)
+            navigationBarTitle: BlokkNeueFont.with(size: 18.0, weight: .regular),
+            label: BlokkNeueFont.with(size: 17.0, weight: .regular),
+            textfield: BlokkNeueFont.with(size: 14.0, weight: .regular)
         )
     )
 }
