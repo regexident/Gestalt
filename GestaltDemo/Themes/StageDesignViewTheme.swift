@@ -8,7 +8,9 @@
 
 import UIKit
 
-struct StageDesignViewTheme {
+import Gestalt
+
+struct StageDesignViewTheme: Theme {
     let backgroundColor: UIColor
 
     let lightOpacity: Float

@@ -10,20 +10,18 @@ import UIKit
 
 import Gestalt
 
-struct ButtonTheme: AppearanceTheme {
-    typealias View = UIButton
-
+public struct ButtonTheme: Theme {
     let tintColor: UIColor
 
     init(palette: Palette) {
         self.tintColor = palette.colors.dynamic.tint
     }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-
-        proxy.tintColor = self.tintColor
-    }
 }
 
-extension ButtonTheme.View: AppearanceThemeView {}
+extension UIButton: Themeable {
+    public typealias Theme = ButtonTheme
+
+    public func apply(theme: Theme) {
+        self.tintColor = theme.tintColor
+    }
+}

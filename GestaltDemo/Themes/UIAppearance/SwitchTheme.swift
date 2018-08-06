@@ -10,20 +10,18 @@ import UIKit
 
 import Gestalt
 
-struct SwitchTheme: AppearanceTheme {
-    typealias View = UISwitch
-
+public struct SwitchTheme: Theme {
     let tintColor: UIColor
 
     init(palette: Palette) {
         self.tintColor = palette.colors.dynamic.tint
     }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-
-        proxy.tintColor = self.tintColor
-    }
 }
 
-extension SwitchTheme.View: AppearanceThemeView {}
+extension UISwitch: Themeable {
+    public typealias Theme = SwitchTheme
+
+    public func apply(theme: Theme) {
+        self.onTintColor = theme.tintColor
+    }
+}

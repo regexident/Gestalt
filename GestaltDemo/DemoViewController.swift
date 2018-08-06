@@ -46,11 +46,11 @@ class DemoViewController: UIViewController {
 
     @objc private func toggleTheme(_ sender: UIBarItem) {
         if self.isDark {
-            ThemeManager.default.theme = Theme.light
+            ThemeManager.default.theme = ApplicationTheme.light
 
             self.titleLabel.text = "Day Time!"
         } else {
-            ThemeManager.default.theme = Theme.dark
+            ThemeManager.default.theme = ApplicationTheme.dark
 
             self.titleLabel.text = "Night Time!"
         }

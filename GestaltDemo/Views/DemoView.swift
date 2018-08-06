@@ -11,25 +11,24 @@ import UIKit
 import Gestalt
 
 class DemoView: UIView {
-
-    @IBOutlet var titleLabel: UILabel?
-    @IBOutlet var label: UILabel?
+    @IBOutlet private var titleLabel: UILabel?
+    @IBOutlet private var label: UILabel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.theme()
+        self.observe(theme: \ApplicationTheme.custom.demo)
     }
+}
 
-    func theme() {
-        ThemeManager.default.apply(theme: Theme.self, to: self) { themeable, theme in
-            let theme = theme.custom.demo
+extension DemoView: Themeable {
+    typealias Theme = DemoViewTheme
 
-            themeable.titleLabel?.textColor = theme.titleColor
-            themeable.titleLabel?.font = theme.titleFont
+    func apply(theme: Theme) {
+        self.titleLabel?.textColor = theme.titleColor
+        self.titleLabel?.font = theme.titleFont
 
-            themeable.label?.textColor = theme.labelColor
-            themeable.label?.font = theme.labelFont
-        }
+        self.label?.textColor = theme.labelColor
+        self.label?.font = theme.labelFont
     }
 }

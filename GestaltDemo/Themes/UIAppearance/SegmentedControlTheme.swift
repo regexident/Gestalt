@@ -10,20 +10,18 @@ import UIKit
 
 import Gestalt
 
-struct SegmentedControlTheme: AppearanceTheme {
-    typealias View = UISegmentedControl
-
+public struct SegmentedControlTheme: Theme {
     let tintColor: UIColor
 
     init(palette: Palette) {
         self.tintColor = palette.colors.dynamic.tint
     }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-
-        proxy.tintColor = self.tintColor
-    }
 }
 
-extension SegmentedControlTheme.View: AppearanceThemeView {}
+extension UISegmentedControl: Themeable {
+    public typealias Theme = SegmentedControlTheme
+
+    public func apply(theme: Theme) {
+        self.tintColor = theme.tintColor
+    }
+}

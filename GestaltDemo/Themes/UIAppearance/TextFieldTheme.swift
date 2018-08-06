@@ -10,9 +10,7 @@ import UIKit
 
 import Gestalt
 
-struct TextFieldTheme: AppearanceTheme {
-    typealias View = UITextField
-
+public struct TextFieldTheme: Theme {
     let font: UIFont
     let borderStyle: UITextBorderStyle
     let textColor: UIColor
@@ -24,15 +22,15 @@ struct TextFieldTheme: AppearanceTheme {
         self.textColor = palette.colors.dynamic.primary
         self.backgroundColor = palette.colors.dynamic.complementary
     }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-
-        proxy.textColor = self.textColor
-        proxy.backgroundColor = self.backgroundColor
-        proxy.borderStyle = self.borderStyle
-        proxy.font = self.font
-    }
 }
 
-extension TextFieldTheme.View: AppearanceThemeView {}
+extension UITextField: Themeable {
+    public typealias Theme = TextFieldTheme
+
+    public func apply(theme: Theme) {
+        self.textColor = theme.textColor
+        self.backgroundColor = theme.backgroundColor
+        self.borderStyle = theme.borderStyle
+        self.font = theme.font
+    }
+}

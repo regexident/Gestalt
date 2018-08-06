@@ -10,20 +10,18 @@ import UIKit
 
 import Gestalt
 
-struct ActivityIndicatorViewTheme: AppearanceTheme {
-    typealias View = UIActivityIndicatorView
-
+public struct ActivityIndicatorViewTheme: Theme {
     let color: UIColor
 
     init(palette: Palette) {
         self.color = palette.colors.dynamic.tint
     }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-
-        proxy.color = self.color
-    }
 }
 
-extension ActivityIndicatorViewTheme.View: AppearanceThemeView {}
+extension UIActivityIndicatorView: Themeable {
+    public typealias Theme = ActivityIndicatorViewTheme
+
+    public func apply(theme: Theme) {
+        self.color = theme.color
+    }
+}

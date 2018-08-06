@@ -31,17 +31,20 @@ struct StylePalette: PaletteProtocol {
     let stageDesign: StageDesignViewStylePalette
 
     let barStyle: UIBarStyle
+    let barTranslucency: Bool
     let borderStyle: UITextBorderStyle
 
     static let light: StylePalette = .init(
         stageDesign: .light,
         barStyle: .default,
+        barTranslucency: true,
         borderStyle: .roundedRect
     )
     
     static let dark: StylePalette = .init(
         stageDesign: .dark,
         barStyle: .black,
+        barTranslucency: true,
         borderStyle: .roundedRect
     )
 

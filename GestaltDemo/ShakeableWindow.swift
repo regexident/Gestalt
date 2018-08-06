@@ -11,7 +11,7 @@ import UIKit
 import Gestalt
 
 class ShakeableWindow: UIWindow {
-    var previousTheme: ThemeProtocol? = nil
+    var previousTheme: Theme? = nil
     var debugThemeEnabled : Bool = false
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -27,7 +27,7 @@ class ShakeableWindow: UIWindow {
             ThemeManager.default.theme = self.previousTheme
             self.previousTheme = nil
         } else {
-            ThemeManager.default.theme = Theme.debug
+            ThemeManager.default.theme = ApplicationTheme.debug
             self.previousTheme = ThemeManager.default.theme
         }
         self.debugThemeEnabled = !self.debugThemeEnabled

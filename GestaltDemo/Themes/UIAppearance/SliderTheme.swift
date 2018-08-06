@@ -10,20 +10,18 @@ import UIKit
 
 import Gestalt
 
-struct SliderTheme: AppearanceTheme {
-    typealias View = UISlider
-
+public struct SliderTheme: Theme {
     let tintColor: UIColor
 
     init(palette: Palette) {
         self.tintColor = palette.colors.dynamic.tint
     }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-
-        proxy.tintColor = self.tintColor
-    }
 }
 
-extension SliderTheme.View: AppearanceThemeView {}
+extension UISlider: Themeable {
+    public typealias Theme = SliderTheme
+
+    public func apply(theme: Theme) {
+        self.tintColor = theme.tintColor
+    }
+}
