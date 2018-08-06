@@ -10,7 +10,7 @@ import UIKit
 
 import Gestalt
 
-struct NativeTheme {
+struct NativeTheme: Theme {
     let navigationBar: NavigationBarTheme
     let textfield: TextFieldTheme
     let segmentedControl: SegmentedControlTheme
@@ -19,46 +19,43 @@ struct NativeTheme {
     let `switch`: SwitchTheme
     let slider: SliderTheme
     let button: ButtonTheme
+
+    init(palette: Palette) {
+        self.navigationBar = .init(palette: palette)
+        self.textfield = .init(palette: palette)
+        self.segmentedControl = .init(palette: palette)
+        self.activityIndicator = .init(palette: palette)
+        self.stepper = .init(palette: palette)
+        self.switch = .init(palette: palette)
+        self.slider = .init(palette: palette)
+        self.button = .init(palette: palette)
+    }
 }
 
-struct CustomTheme {
+struct CustomTheme: Theme {
     let stageDesign: StageDesignViewTheme
     let demo: DemoViewTheme
     
-
     init(palette: Palette) {
         self.stageDesign = .init(palette: palette)
         self.demo = .init(palette: palette)
     }
 }
 
-struct Theme: ThemeProtocol {
+struct ApplicationTheme: Theme {
     let native: NativeTheme
     let custom: CustomTheme
 
-    static var `default`: Theme {
-        return Theme.light
+    static var `default`: ApplicationTheme {
+        return .light
     }
 
-    static let light: Theme = .init(palette: .light)
-    static let dark: Theme = .init(palette: .dark)
-    static let debug: Theme = .init(palette: .debug)
-}
+    static let light: ApplicationTheme = .init(palette: .light)
+    static let dark: ApplicationTheme = .init(palette: .dark)
+    static let debug: ApplicationTheme = .init(palette: .debug)
 
-extension Theme {
     init(palette: Palette) {
-        self.init(
-            native: .init(
-                navigationBar: .init(palette: palette),
-                textfield: .init(palette: palette),
-                segmentedControl: .init(palette: palette),
-                activityIndicator: .init(palette: palette),
-                stepper: .init(palette: palette),
-                switch: .init(palette: palette),
-                slider: .init(palette: palette),
-                button: .init(palette: palette)
-            ),
-            custom: .init(palette: palette)
-        )
+        self.native = .init(palette: palette)
+        self.custom = .init(palette: palette)
     }
 }

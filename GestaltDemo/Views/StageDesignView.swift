@@ -16,32 +16,28 @@ class StageDesignView: UIView {
     @IBOutlet private var fixtureView: UIImageView?
     @IBOutlet private var shadowView: UIImageView?
 
-    override func prepareForInterfaceBuilder() {
-        self.theme()
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.theme()
+        self.observe(theme: \ApplicationTheme.custom.stageDesign)
     }
+}
 
-    func theme() {
-        ThemeManager.default.apply(theme: Theme.self, to: self) { themeable, theme in
-            let theme = theme.custom.stageDesign
+extension StageDesignView: Themeable {
+    typealias Theme = StageDesignViewTheme
 
-            UIView.performWithoutAnimation {
-                themeable.backgroundColor = theme.backgroundColor
-                themeable.shadowView?.layer.opacity = theme.shadowOpacity
-            }
-
-            UIView.animate(withDuration: 5.0, animations: {
-                themeable.lightView?.layer.opacity = theme.lightOpacity
-            })
-
-            themeable.lightView?.image = theme.lightImage
-            themeable.fixtureView?.image = theme.fixtureImage
-            themeable.shadowView?.image = theme.shadowImage
+    func apply(theme: Theme) {
+        UIView.performWithoutAnimation {
+            self.backgroundColor = theme.backgroundColor
+            self.shadowView?.layer.opacity = theme.shadowOpacity
         }
+
+        UIView.animate(withDuration: 5.0, animations: {
+            self.lightView?.layer.opacity = theme.lightOpacity
+        })
+
+        self.lightView?.image = theme.lightImage
+        self.fixtureView?.image = theme.fixtureImage
+        self.shadowView?.image = theme.shadowImage
     }
 }

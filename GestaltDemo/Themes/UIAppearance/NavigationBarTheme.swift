@@ -10,33 +10,33 @@ import UIKit
 
 import Gestalt
 
-struct NavigationBarTheme: AppearanceTheme {
-    typealias View = UINavigationBar
-
+public struct NavigationBarTheme: Theme {
     let barStyle: UIBarStyle
     let titleFont: UIFont
     let titleColor: UIColor
     let tintColor: UIColor
+    let isTranslucent: Bool
 
     init(palette: Palette) {
         self.barStyle = palette.styles.barStyle
         self.titleFont = palette.fonts.static.navigationBarTitle
         self.titleColor = palette.colors.dynamic.primary
         self.tintColor = palette.colors.dynamic.tint
-    }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-        
-        proxy.barStyle = self.barStyle
-        proxy.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: self.titleColor,
-            NSAttributedStringKey.font: self.titleFont
-        ]
-
-        proxy.isTranslucent = true
-        proxy.tintColor = self.tintColor
+        self.isTranslucent = palette.styles.barTranslucency
     }
 }
 
-extension NavigationBarTheme.View: AppearanceThemeView {}
+extension UINavigationBar: Themeable {
+    public typealias Theme = NavigationBarTheme
+
+    public func apply(theme: Theme) {
+        self.barStyle = theme.barStyle
+        self.titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: theme.titleColor,
+            NSAttributedStringKey.font: theme.titleFont
+        ]
+
+        self.isTranslucent = theme.isTranslucent
+        self.tintColor = theme.tintColor
+    }
+}

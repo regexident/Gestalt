@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF352D892118ADD60024BE3C /* ThemeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF352D882118ADD60024BE3C /* ThemeObserver.swift */; };
+		BF352D8B2118AE2A0024BE3C /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF352D8A2118AE2A0024BE3C /* ThemeManager.swift */; };
+		BF352D8D2118AE560024BE3C /* Themeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF352D8C2118AE560024BE3C /* Themeable.swift */; };
 		BF588FA320AACCE100EC028B /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FA220AACCE100EC028B /* ColorPalette.swift */; };
 		BF588FA520AACFDF00EC028B /* FontPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FA420AACFDF00EC028B /* FontPalette.swift */; };
 		BF588FA820AAD0D400EC028B /* BlokkNeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FA720AAD0D400EC028B /* BlokkNeue.swift */; };
@@ -86,6 +89,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF352D882118ADD60024BE3C /* ThemeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeObserver.swift; sourceTree = "<group>"; };
+		BF352D8A2118AE2A0024BE3C /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		BF352D8C2118AE560024BE3C /* Themeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themeable.swift; sourceTree = "<group>"; };
 		BF588FA220AACCE100EC028B /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		BF588FA420AACFDF00EC028B /* FontPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPalette.swift; sourceTree = "<group>"; };
 		BF588FA720AAD0D400EC028B /* BlokkNeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlokkNeue.swift; sourceTree = "<group>"; };
@@ -272,6 +278,9 @@
 			children = (
 				BF8F90731F0AA3350083EFCF /* Gestalt.h */,
 				BF8F908A1F0AA3490083EFCF /* Gestalt.swift */,
+				BF352D8C2118AE560024BE3C /* Themeable.swift */,
+				BF352D882118ADD60024BE3C /* ThemeObserver.swift */,
+				BF352D8A2118AE2A0024BE3C /* ThemeManager.swift */,
 				BF8F90741F0AA3350083EFCF /* Info.plist */,
 			);
 			path = Gestalt;
@@ -496,6 +505,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF8F908B1F0AA3490083EFCF /* Gestalt.swift in Sources */,
+				BF352D8D2118AE560024BE3C /* Themeable.swift in Sources */,
+				BF352D892118ADD60024BE3C /* ThemeObserver.swift in Sources */,
+				BF352D8B2118AE2A0024BE3C /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

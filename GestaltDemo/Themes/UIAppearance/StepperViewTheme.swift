@@ -10,20 +10,18 @@ import UIKit
 
 import Gestalt
 
-struct StepperTheme: AppearanceTheme {
-    typealias View = UIStepper
-
+public struct StepperTheme: Theme {
     let tintColor: UIColor
 
     init(palette: Palette) {
         self.tintColor = palette.colors.dynamic.tint
     }
-
-    func theme(_ klass: View.Type) {
-        let proxy = klass.appearance()
-
-        proxy.tintColor = self.tintColor
-    }
 }
 
-extension StepperTheme.View: AppearanceThemeView {}
+extension UIStepper: Themeable {
+    public typealias Theme = StepperTheme
+
+    public func apply(theme: Theme) {
+        self.tintColor = theme.tintColor
+    }
+}

@@ -8,7 +8,9 @@
 
 import UIKit
 
-struct DemoViewTheme {
+import Gestalt
+
+struct DemoViewTheme: Theme {
     let titleColor: UIColor
     let titleFont: UIFont
 
