@@ -12,17 +12,24 @@ Let's say you want to theme a view controller with a single label:
 ```swift
 import Gestalt
 
-struct Theme: ThemeProtocol {
+struct Theme: Gestalt.Theme {
+    let view: ViewTheme = .init()
+
+    static let light: Theme = .init(view: .light)
+    static let dark: Theme = .init(view: .dark)
+}
+
+struct ViewTheme: Gestalt.Theme {
     let font = UIFont.preferredFont(forTextStyle: .headline)
     let color: UIColor
     let backgroundColor: UIColor
 
-    static let light = Theme(
+    static let light: Theme = .init(
         color: UIColor.black
         backgroundColor: UIColor.white
     )
 
-    static let dark = Theme(
+    static let dark: Theme = .init(
         color: UIColor.white
         backgroundColor: UIColor.black
     )
@@ -37,17 +44,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		self.observe(theme: \Theme.view)
+    }
+}
 
-        ThemeManager.default.apply(theme: Theme.self, to: self) { themeable, theme in
-            themeable.view.backgroundColor = theme.backgroundColor
-            themeable.label.textColor = theme.color
-            themeable.label.font = theme.font
-        }
+extension ViewController: Themeable {
+	typealias Theme = ViewTheme
+
+    func apply(theme: Theme) {
+		self.view.backgroundColor = theme.backgroundColor
+        self.label.textColor = theme.color
+        self.label.font = theme.font
     }
 }
 ```
 
-A call to `ThemeManager.apply(theme:to:animated:closure:)` registers the closure passed to it on the given `ThemeManager` for future theme changes and then calls it once immediately. If you want the initial call to be animated, make sure to pass `…, animated: true, …` to it (the default is `false`).
+The call `self.observe(theme: \Theme.view)` registers the receiver for theme observation on `ThemeManager.default` for future theme changes and then calls it once immediately. The initial call is not animated, any further changes however are animated.
 
 To change the current theme (even while the app is running) simply assign a different theme to your given `ThemeManager` in use:
 
@@ -57,28 +70,25 @@ ThemeManager.default.theme = Theme.dark
 
 This will cause all previously registered closures on the given `ThemeManager` to be called again.
 
+See the `GestaltDemo` target for a more realistic/elaborate usage example.
+
 #### Note:
 
 1. It is generally sufficient to use `ThemeManager.default`. It is however possible to create dedicated `ThemeManager`s via `let manager = ThemeManager()`.
-2. The value passed to `animated` overrides the `ThemeManager`'s default setting
-of `var animated: Bool` for the initial call of the closure.
 
 #### Important:
 
-1. Within `closure` any access on `themeable` should only achieved through
- the closure's `$0` argument, not directly, to avoid retain cycles.
-2. The body of `closure` should be [idempotent](https://en.wikipedia.org/wiki/Idempotence)
- to avoid unwanted side-effects on repeated calls.
+1. The body of `func apply(theme: Theme)` should be [idempotent](https://en.wikipedia.org/wiki/Idempotence) to avoid unwanted side-effects on repeated calls.
 
 ## Installation
 
 The recommended way to add **Gestalt** to your project is via [Carthage](https://github.com/Carthage/Carthage):
 
-    github 'regexident/Gestalt'
+    github 'regexident/Gestalt' ~> 2.0.0
     
 or via [Cocoapods](https://cocoapods.org):
 
-    pod 'Gestalt'
+    pod 'Gestalt', '~> 2.0.0'
 
 or via [Swift Package Manager](https://swift.org):
 
@@ -86,7 +96,7 @@ or via [Swift Package Manager](https://swift.org):
 let package = Package(
     name: "GestaltDemo",
     dependencies: [
-      .package(url: "https://github.com/regexident/Gestalt.git", from: "1.2.1")
+      .package(url: "https://github.com/regexident/Gestalt.git", from: "2.0.0")
     ],
     targets: [
         .target(name: "GestaltDemo", dependencies: [ "Gestalt" ])
