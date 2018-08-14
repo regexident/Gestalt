@@ -33,6 +33,9 @@
 		BF588FD520AB0A7A00EC028B /* ShakeableWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FD420AB0A7A00EC028B /* ShakeableWindow.swift */; };
 		BF588FDA20AB0E1D00EC028B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = BF588FD920AB0E1D00EC028B /* Fonts */; };
 		BF588FDC20AC32FD00EC028B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF588FDB20AC32FD00EC028B /* UIImage+Extensions.swift */; };
+		BF80FD1F212326CD00891BC2 /* Themeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF352D8C2118AE560024BE3C /* Themeable.swift */; };
+		BF80FD20212326CD00891BC2 /* ThemeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF352D882118ADD60024BE3C /* ThemeObserver.swift */; };
+		BF80FD21212326CD00891BC2 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF352D8A2118AE2A0024BE3C /* ThemeManager.swift */; };
 		BF8F907F1F0AA3350083EFCF /* GestaltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F907E1F0AA3350083EFCF /* GestaltTests.swift */; };
 		BF8F90811F0AA3350083EFCF /* Gestalt.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8F90731F0AA3350083EFCF /* Gestalt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF8F908B1F0AA3490083EFCF /* Gestalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F908A1F0AA3490083EFCF /* Gestalt.swift */; };
@@ -556,6 +559,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF7041E1F5DA35F00DFF413 /* Gestalt.swift in Sources */,
+				BF80FD1F212326CD00891BC2 /* Themeable.swift in Sources */,
+				BF80FD20212326CD00891BC2 /* ThemeObserver.swift in Sources */,
+				BF80FD21212326CD00891BC2 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
