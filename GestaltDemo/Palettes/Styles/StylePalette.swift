@@ -32,7 +32,7 @@ struct StylePalette: PaletteProtocol {
 
     let barStyle: UIBarStyle
     let barTranslucency: Bool
-    let borderStyle: UITextBorderStyle
+    let borderStyle: UITextField.BorderStyle
 
     static let light: StylePalette = .init(
         stageDesign: .light,

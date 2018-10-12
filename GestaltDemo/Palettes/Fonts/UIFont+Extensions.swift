@@ -11,7 +11,7 @@ import UIKit
 extension UIFont {
     class func preferredFont(
         withName fontName: String,
-        textStyle style: UIFontTextStyle
+        textStyle style: UIFont.TextStyle
     ) -> UIFont {
         let descriptor = UIFontDescriptor.preferredFontDescriptor(
             withName: fontName,
@@ -24,7 +24,7 @@ extension UIFont {
 extension UIFontDescriptor {
     class func preferredFontDescriptor(
         withName fontName: String,
-        textStyle: UIFontTextStyle
+        textStyle: UIFont.TextStyle
     ) -> UIFontDescriptor {
         let size = self.preferredFontDescriptor(withTextStyle: textStyle).pointSize
         return UIFontDescriptor(name: fontName, size: size)

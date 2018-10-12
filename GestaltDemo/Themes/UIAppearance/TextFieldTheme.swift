@@ -12,7 +12,7 @@ import Gestalt
 
 public struct TextFieldTheme: Theme {
     let font: UIFont
-    let borderStyle: UITextBorderStyle
+    let borderStyle: UITextField.BorderStyle
     let textColor: UIColor
     let backgroundColor: UIColor
 

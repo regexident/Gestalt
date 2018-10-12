@@ -22,7 +22,7 @@ enum BlokkNeueFont {
         return "\(self.fontName)-\(weight.rawValue.capitalized)"
     }
 
-    static func with(textStyle: UIFontTextStyle, weight: Weight = .default) -> UIFont {
+    static func with(textStyle: UIFont.TextStyle, weight: Weight = .default) -> UIFont {
         let name = self.name(for: weight)
         let descriptor = UIFontDescriptor.preferredFontDescriptor(
             withName: name,

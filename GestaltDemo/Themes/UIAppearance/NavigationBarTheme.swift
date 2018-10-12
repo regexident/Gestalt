@@ -32,8 +32,8 @@ extension UINavigationBar: Themeable {
     public func apply(theme: Theme) {
         self.barStyle = theme.barStyle
         self.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: theme.titleColor,
-            NSAttributedStringKey.font: theme.titleFont
+            NSAttributedString.Key.foregroundColor: theme.titleColor,
+            NSAttributedString.Key.font: theme.titleFont
         ]
 
         self.isTranslucent = theme.isTranslucent

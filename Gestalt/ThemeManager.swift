@@ -1,3 +1,4 @@
+
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -81,7 +82,7 @@ public class ThemeManager {
             NotificationCenter.default.addObserver(
                 self,
                 selector: #selector(ThemeManager.handleDynamicTypeChange(_:)),
-                name: NSNotification.Name.UIContentSizeCategoryDidChange,
+                name: UIContentSizeCategory.didChangeNotification,
                 object: nil
             )
         }
@@ -137,7 +138,8 @@ public class ThemeManager {
     ///   - closure: closure for applying provided the theme to the sender
     ///
     /// - Important:
-    ///   1. Within `closure` any access on "closed over" objects must be guarded by `[weak ...]` to avoid retain cycles.
+    ///   1. Within `closure` any access on "closed over" objects
+    ///      must be guarded by `[weak ...]` to avoid retain cycles.
     ///   2. The body of `closure` should be [idempotent](https://en.wikipedia.org/wiki/Idempotence)
     ///      to avoid unwanted side-effects on repeated calls.
     public func observe<T>(

@@ -12,7 +12,8 @@ import AppKit
 public protocol Themeable: class {
     associatedtype Theme: Gestalt.Theme
 
-    /// The implementation of this function should be [idempotent](https://en.wikipedia.org/wiki/Idempotence)
+    /// The implementation of this function should be
+    /// [idempotent](https://en.wikipedia.org/wiki/Idempotence)
     /// to avoid unwanted side-effects on repeated calls.
     func apply(theme: Theme)
 }
@@ -38,7 +39,10 @@ extension Themeable where Self: UIAppearance {
         where T: Gestalt.Theme
     {
         return themeManager.observe(theme: T.self) { theme in
-            self.apply(theme: theme[keyPath: keyPath], appearance: appearance)
+            self.apply(
+                theme: theme[keyPath: keyPath],
+                appearance: appearance
+            )
         }
     }
 

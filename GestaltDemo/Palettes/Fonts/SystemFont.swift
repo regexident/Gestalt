@@ -11,7 +11,7 @@ import UIKit
 enum SystemFont {
     typealias Weight = UIFont.Weight
 
-    static func with(textStyle: UIFontTextStyle) -> UIFont {
+    static func with(textStyle: UIFont.TextStyle) -> UIFont {
         return UIFont.preferredFont(forTextStyle: textStyle)
     }
 
