@@ -44,16 +44,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		self.observe(theme: \Theme.view)
+        
+        self.observe(theme: \Theme.view)
     }
 }
 
 extension ViewController: Themeable {
-	typealias Theme = ViewTheme
+
+    typealias Theme = ViewTheme
 
     func apply(theme: Theme) {
-		self.view.backgroundColor = theme.backgroundColor
+        self.view.backgroundColor = theme.backgroundColor
         self.label.textColor = theme.color
         self.label.font = theme.font
     }
@@ -96,7 +97,7 @@ or via [Swift Package Manager](https://swift.org):
 let package = Package(
     name: "GestaltDemo",
     dependencies: [
-      .package(url: "https://github.com/regexident/Gestalt.git", from: "2.0.0")
+        .package(url: "https://github.com/regexident/Gestalt.git", from: "2.0.0")
     ],
     targets: [
         .target(name: "GestaltDemo", dependencies: [ "Gestalt" ])
