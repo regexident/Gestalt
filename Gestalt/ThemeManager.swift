@@ -226,10 +226,12 @@ public class ThemeManager {
             #if os(iOS)
             // HACK: apparently the only way to
             // change the appearance of existing instances:
-            for window in UIApplication.shared.windows {
-                for view in window.subviews {
-                    view.removeFromSuperview()
-                    window.addSubview(view)
+            if let sharedApplication = SafeApplication.shared {
+                for window in sharedApplication.windows {
+                    for view in window.subviews {
+                        view.removeFromSuperview()
+                        window.addSubview(view)
+                    }
                 }
             }
             #endif
@@ -262,3 +264,17 @@ extension ThemeManager: CustomStringConvertible {
         }
     }
 }
+
+#if os(iOS)
+open class SafeApplication {
+    static var shared: UIApplication? {
+        let sharedSelector = NSSelectorFromString("sharedApplication")
+        guard UIApplication.responds(to: sharedSelector) else {
+            // Extensions cannot access UIApplication
+            return nil
+        }
+        let shared = UIApplication.perform(sharedSelector)
+        return shared?.takeUnretainedValue() as? UIApplication
+    }
+}
+#endif
