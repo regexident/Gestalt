@@ -33,6 +33,19 @@ public class ThemeManager {
 
     // NotificationCenter used for broadcasting theme changes
     private var notificationCenter: NotificationCenter = .init()
+    
+    // For appearance hack (see below), only accessible in iOS Applications
+    #if os(iOS)
+    private let optionalSharedApplication: UIApplication? = {
+        let sharedSelector = NSSelectorFromString("sharedApplication")
+        guard UIApplication.responds(to: sharedSelector) else {
+            // Extensions cannot access UIApplication
+            return nil
+        }
+        let shared = UIApplication.perform(sharedSelector)
+        return shared?.takeUnretainedValue() as? UIApplication
+    }()
+    #endif
 
     /// The current theme.
     ///
@@ -226,7 +239,7 @@ public class ThemeManager {
             #if os(iOS)
             // HACK: apparently the only way to
             // change the appearance of existing instances:
-            if let sharedApplication = SafeApplication.shared {
+            if let sharedApplication = self?.optionalSharedApplication {
                 for window in sharedApplication.windows {
                     for view in window.subviews {
                         view.removeFromSuperview()
@@ -264,17 +277,3 @@ extension ThemeManager: CustomStringConvertible {
         }
     }
 }
-
-#if os(iOS)
-open class SafeApplication {
-    static var shared: UIApplication? {
-        let sharedSelector = NSSelectorFromString("sharedApplication")
-        guard UIApplication.responds(to: sharedSelector) else {
-            // Extensions cannot access UIApplication
-            return nil
-        }
-        let shared = UIApplication.perform(sharedSelector)
-        return shared?.takeUnretainedValue() as? UIApplication
-    }
-}
-#endif
