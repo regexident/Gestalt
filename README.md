@@ -77,6 +77,19 @@ See the `GestaltDemo` target for a more realistic/elaborate usage example.
 
 1. It is generally sufficient to use `ThemeManager.default`. It is however possible to create dedicated `ThemeManager`s via `let manager = ThemeManager()`.
 
+### Usage in App Extensions
+
+The use appearance proxies after a view has already been loaded this library uses a hack that removes and re-adds the root view of the application from the main window to activate the proxies. This is not possible in app extensions, such as a today widget, because the extension safe API restricts access to the main window. So to use this library in app extensions you need to manually trigger the reload of the root view by adding something like this to your root view controller after you set up your themes.
+
+```
+ThemeManager.default.observe(theme: Theme.self) { [weak self] _ in
+        if let strongSelf = self, let superview = strongSelf.view.superview {
+            strongSelf.view.removeFromSuperview()
+            superview.addSubview(strongSelf.view)
+        }
+    }
+```
+
 #### Important:
 
 1. The body of `func apply(theme: Theme)` should be [idempotent](https://en.wikipedia.org/wiki/Idempotence) to avoid unwanted side-effects on repeated calls.
