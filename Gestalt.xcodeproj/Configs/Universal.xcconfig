@@ -5,7 +5,6 @@ OTHER_SWIFT_FLAGS = -DXcode
 VALID_ARCHS = $(ARCHS_STANDARD)
 
 SDKROOT[sdk=iphone*] = iphoneos
-//VALID_ARCHS[sdk=iphone*] = arm64 armv7 armv7s
 IPHONEOS_DEPLOYMENT_TARGET = 10.0
 TARGETED_DEVICE_FAMILY[sdk=iphone*]  = 1,2
 LD_RUNPATH_SEARCH_PATHS[sdk=iphone*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
@@ -21,6 +20,5 @@ TARGETED_DEVICE_FAMILY[sdk=watch*] = 4
 LD_RUNPATH_SEARCH_PATHS[sdk=watch*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 
 SDKROOT[sdk=macosx*] = macosx
-//VALID_ARCHS[sdk=macosx*] = x86_64
 MACOSX_DEPLOYMENT_TARGET = 10.13
 LD_RUNPATH_SEARCH_PATHS[sdk=macosx*] = $(inherited) @executable_path/../Frameworks @loader_path/../Frameworks
