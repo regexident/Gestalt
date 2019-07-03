@@ -1,4 +1,9 @@
 language: swift
-osx_image: xcode9
+osx_image: xcode10
 script:
-  - xcodebuild -scheme Gestalt -project Gestalt.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.0' build test
+  - swift --version
+  - xcodebuild -version
+  - xcodebuild -scheme Gestalt -project Gestalt.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' build test
+  - xcodebuild -scheme Gestalt -project Gestalt.xcodeproj -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV 4K,OS=12.0' build test
+  - xcodebuild -scheme Gestalt -project Gestalt.xcodeproj -sdk watchsimulator -destination 'platform=watchOS Simulator,name=Apple Watch Series 4 - 44mm,OS=5.0' build
+  - xcodebuild -scheme Gestalt -destination 'platform=macOS,arch=x86_64' build

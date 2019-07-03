@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-#if os(iOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
 import UIKit
 #elseif os(OSX)
 import AppKit
