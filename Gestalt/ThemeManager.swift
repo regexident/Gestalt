@@ -90,15 +90,13 @@ public class ThemeManager {
     ///   Consider using `ThemeManager.default` instead of creating your own instances.
     ///   It should cover 99% of your use-cases.
     public init() {
-        #if os(iOS)
-        if #available(iOS 7, *) {
-            NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(ThemeManager.handleDynamicTypeChange(_:)),
-                name: UIContentSizeCategory.didChangeNotification,
-                object: nil
-            )
-        }
+        #if os(iOS) || os(tvOS)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(ThemeManager.handleDynamicTypeChange(_:)),
+            name: UIContentSizeCategory.didChangeNotification,
+            object: nil
+        )
         #endif
     }
 
