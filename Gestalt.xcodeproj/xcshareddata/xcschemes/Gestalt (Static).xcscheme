@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF8F906F1F0AA3350083EFCF"
-               BuildableName = "Gestalt.framework"
-               BlueprintName = "Gestalt"
+               BlueprintIdentifier = "BFF704141F5DA34100DFF413"
+               BuildableName = "libGestalt.a"
+               BlueprintName = "Gestalt (Static)"
                ReferencedContainer = "container:Gestalt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF8F908F1F0AA7D70083EFCF"
-            BuildableName = "GestaltDemo.app"
-            BlueprintName = "GestaltDemo"
+            BlueprintIdentifier = "BFF704141F5DA34100DFF413"
+            BuildableName = "libGestalt.a"
+            BlueprintName = "Gestalt (Static)"
             ReferencedContainer = "container:Gestalt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,6 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BFF704141F5DA34100DFF413"
+            BuildableName = "libGestalt.a"
+            BlueprintName = "Gestalt (Static)"
+            ReferencedContainer = "container:Gestalt.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -73,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF8F906F1F0AA3350083EFCF"
-            BuildableName = "Gestalt.framework"
-            BlueprintName = "Gestalt"
+            BlueprintIdentifier = "BFF704141F5DA34100DFF413"
+            BuildableName = "libGestalt.a"
+            BlueprintName = "Gestalt (Static)"
             ReferencedContainer = "container:Gestalt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
