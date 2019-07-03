@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Gestalt"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "An unintrusive & light-weight app-theming framework."
 
   # This description is used to generate tags and improve search results.
@@ -55,6 +55,14 @@ Pod::Spec.new do |s|
 
   s.author             = "Vincent Esche"
   s.social_media_url   = "http://twitter.com/regexident"
+
+
+  # ――― Swift Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  Specify the versions of Swift compatible with this pod.
+  #
+  s.swift_versions = ['4.2']
+
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
