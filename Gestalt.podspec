@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Gestalt"
-  s.version      = "2.0.1"
+  s.version      = "2.1.0"
   s.summary      = "An unintrusive & light-weight app-theming framework."
 
   # This description is used to generate tags and improve search results.
