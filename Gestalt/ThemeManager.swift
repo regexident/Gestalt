@@ -142,6 +142,25 @@ public class ThemeManager {
         )
     }
 
+    /// Provides automated theme management for `themeable`.
+    ///
+    /// - Parameters:
+    ///   - theme: `themeable`'s sub-theme's key-path relative to the Manager's current theme to apply
+    ///   - themeable: the object to have the theme applied to
+    public func observe<T, U>(
+        theme keyPath: KeyPath<T, U.Theme>,
+        for themeable: U
+    ) -> Disposable
+        where T: Gestalt.Theme, U: Themeable
+    {
+        self.observe(theme: T.self) { [weak themeable] theme in
+            guard let strongThemeable = themeable else {
+                return
+            }
+            strongThemeable.apply(theme: theme[keyPath: keyPath])
+        }
+    }
+
     /// Provides automated theme notification via `closure`.
     ///
     /// - Parameters:
