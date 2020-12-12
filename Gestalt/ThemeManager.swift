@@ -82,6 +82,17 @@ public class ThemeManager {
         }
     }
 
+    /// Defines a list of window class names to check for during the appearance hack.
+    /// If none are defined, then views from all windows will be removed and re-added.
+    ///
+    /// Example of using this property:
+    /// ThemeManager.default.allowedWindowClasses = [UIWindow.classForCoder(), CustomWindow.classForCoder()]
+    ///
+    /// - Note:
+    ///   If this property is not set, then you might run into problems regarding a broken
+    ///   `UITextEffectsWindow`, see https://github.com/regexident/Gestalt/issues/25
+    public var allowedWindowClasses: [AnyClass]?
+
     private var observations: Set<ObjectIdentifier> = []
 
     /// Creates a `ThemeManager` instance
@@ -257,7 +268,11 @@ public class ThemeManager {
             // HACK: apparently the only way to
             // change the appearance of existing instances:
             if let sharedApplication = self?.optionalSharedApplication {
+                let classNames: [String]? = self?.allowedWindowClasses?.map({ NSStringFromClass($0) })
+
                 for window in sharedApplication.windows {
+                    guard classNames?.contains(NSStringFromClass(window.classForCoder)) ?? true else { return }
+
                     for view in window.subviews {
                         view.removeFromSuperview()
                         window.addSubview(view)
